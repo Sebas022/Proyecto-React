@@ -1,50 +1,17 @@
-//import Button from './Button';
 import './App.css'
+import Header from './Components/Header/header';
 import ProductCard from './Components/ProductCard/productCard';
-//import { useEffect, useState } from 'react';
+import Footer from './Footer/footer';
+import Section from './Section/section';
+import closebuttonImage from './assets/Vector.png'
+import './App.css'
 
 function App() {
-  /*
-  
-  const [contador, setContador] = useState<number>(0);
-      
-  const handleClickFirst = () =>{
-    console.log(1);
-  };
-  const handleClickSecond= () =>{
-    console.log(2);
-  };
-  const handleClickThird = () =>{
-    console.log(3);
-  };
 
-  useEffect (() => {
-    console.log("El componente ha cargado");
-  },[]);
+  const ocultar () =>{
 
-  useEffect (() => {
-    console.log("El componente se ha actualizado");
-    return () =>{
-      console.log("El componente se va a desmontar");
-      };
-  },[contador]);
-
-  return (
-
-    <>
-      <p>Haz hecho click {contador} veces</p>
-      <button onClick={() => setContador(contador+1)}>Incrementar</button>
-
-    <section>
-        <h1>Lista de botones</h1>
-        <Button label="Boton 1" handleClick={handleClickFirst}/>
-        <Button handleClick={handleClickSecond}/>
-        <Button label="Boton 3" handleClick={handleClickThird}/>
-    </section>
-    </>
-  );
-*/
-
+  }
+ 
 const products = [
   {
     id: 0,
@@ -68,10 +35,15 @@ const products = [
   },
 ];
 
-
   return (
-
     <>
+    <div className="top-bar">
+        <p>Sign up and get 20% off to your first order. 
+          <a href="#">Sign Up Now.</a> 
+          <a href="#" className="botoncerrar"><img src={closebuttonImage} alt="" /></a>
+        </p>
+    </div>
+    <Header/>
       <main>
         <section className='new-arrivals'>
           <h2>New Arrivals</h2>
@@ -82,8 +54,23 @@ const products = [
               />
             ))}
           </div>
+          <a href="#">View All</a>
+          <hr className="separator1" />
         </section>
+        <section className='top-selling'>
+          <h2>Top Selling</h2>
+          <div className='list'>
+            {products.map((product)=>(
+              <ProductCard 
+              key={product.id} {...product}
+              />
+            ))}
+          </div>
+          <a href="#">View All</a>
+        </section>
+        <Section/>
       </main>
+      <Footer />
     </>
   );
 }

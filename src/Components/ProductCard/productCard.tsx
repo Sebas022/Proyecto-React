@@ -1,5 +1,5 @@
 import React from "react";
-import productImage from './Frame 32.png'
+import productImage from '../../assets/Frame 32.png'
 
 interface ProductCardProps{
     name: string;
@@ -9,7 +9,7 @@ interface ProductCardProps{
 export default function ProductCard({ name, price}: ProductCardProps) {
 
     return (
-        <>
+      <>
     <div className='product-card'>
               <div className='product-image'>
                 <img src={productImage} alt="Imagen del producto" />
@@ -19,7 +19,7 @@ export default function ProductCard({ name, price}: ProductCardProps) {
                 <p>{price}</p>
               </div>
             </div>
-    </>
+      </>
     );
     
 }

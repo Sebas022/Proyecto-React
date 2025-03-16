@@ -1,0 +1,72 @@
+h1{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.main-section{
+    width: 80%;
+    margin: auto;
+    background-color: #F0F0F0;
+    border-radius: 20px;
+    height: auto;
+    
+}
+
+#layout{    
+    width: 65%;
+    height: 400px;
+    line-height: auto;
+    margin: auto;
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 1fr 1fr 3fr;
+}
+
+#layout .caja{
+    font-size: 20px;
+    font-weight: bold;
+    height: 20px;
+    margin: auto 0;
+    padding: 80px;
+    color: black;
+    border-radius: 10px;
+    background: gray;
+}
+
+#layout .casual{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-image: url('../assets/image 11.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#layout .formal{
+    grid-column-start: 2;
+    grid-column-end: 6;
+    background-image: url('../assets/image 13.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#layout .party{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-image: url('../assets/image 12.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#layout .gym{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    background-image: url('../assets/image 14.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
