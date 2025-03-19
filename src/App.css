@@ -1,5 +1,11 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
 .top-bar{
-    width: 99.5%;
+    width: auto;
     background-color: black;
     margin: auto;
     padding: 5px;
@@ -9,4 +15,9 @@
 }
 .top-bar a{
     color: white;
+}
+
+.btncerrar{
+    cursor: pointer;
+    margin-left: 20%;
 }

@@ -1,12 +1,12 @@
-import xImage from '../assets/1.png'
-import facebookImage from '../assets/2.png'
-import instagramImage from '../assets/3.png'
-import githubImage from '../assets/4.png'
-import visaImage from '../assets/Visa.png'
-import mastercardImage from '../assets/MasterCard.png'
-import paypalImage from '../assets/Paypal.png'
-import applepayImage from '../assets/ApplePay.png'
-import googlepayImage from '../assets/GooglePay.png'
+import xImage from '../../assets/1.png'
+import facebookImage from '../../assets/2.png'
+import instagramImage from '../../assets/3.png'
+import githubImage from '../../assets/4.png'
+import visaImage from '../../assets/Visa.png'
+import mastercardImage from '../../assets/MasterCard.png'
+import paypalImage from '../../assets/Paypal.png'
+import applepayImage from '../../assets/ApplePay.png'
+import googlepayImage from '../../assets/GooglePay.png'
 import './footer.css'
 
 export default function Footer(){
@@ -17,7 +17,7 @@ export default function Footer(){
         <div className="wrap">
         <div className="menu_footer1">
                 <h5>SHOP.CO</h5>
-                <p className="footer_text">We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
+                <p className="footer_text">We have clothes that suits your style and which you're proud to wear. From women to men.</p>
                 <p id="browsers">
                     <a href=""><img src={xImage} alt="x"/></a>
                     <a href=""><img src={facebookImage} alt="Facebook"/></a>

@@ -1,0 +1,83 @@
+
+@font-face {
+    font-family: "Satoshi";
+    src: url(../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*-----NAV------*/
+.navbar{
+ font-family: 'Satoshi';
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 50px;
+}
+
+@supports (-webkit-text-stroke: 3px black) {
+    .logo {
+      -webkit-text-stroke: 3px black;
+    }
+  }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.search-bar input {   
+     position: relative;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    width: 500px;
+    outline: none;
+    background-color: lightgray;
+
+}
+
+.input-icon {
+    color: #191919;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+ }
+
+.icons {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    padding-right: 50px;
+}
+
+
+  

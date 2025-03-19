@@ -38,7 +38,7 @@ h1{
 #layout .casual{
     grid-column-start: 1;
     grid-column-end: 2;
-    background-image: url('../assets/image 11.png');
+    background-image: url('../../assets/image 11.png');
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -47,7 +47,7 @@ h1{
 #layout .formal{
     grid-column-start: 2;
     grid-column-end: 6;
-    background-image: url('../assets/image 13.png');
+    background-image: url('../../assets/image 13.png');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -56,7 +56,7 @@ h1{
 #layout .party{
     grid-column-start: 1;
     grid-column-end: 4;
-    background-image: url('../assets/image 12.png');
+    background-image: url('../../assets/image 12.png');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -65,7 +65,7 @@ h1{
 #layout .gym{
     grid-column-start: 4;
     grid-column-end: 6;
-    background-image: url('../assets/image 14.png');
+    background-image: url('../../assets/image 14.png');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;

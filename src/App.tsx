@@ -1,17 +1,17 @@
-import './App.css'
 import Header from './Components/Header/header';
 import ProductCard from './Components/ProductCard/productCard';
-import Footer from './Footer/footer';
-import Section from './Section/section';
-import closebuttonImage from './assets/Vector.png'
-import './App.css'
-
+import Footer from './Components/Footer/footer';
+import Section from './Components/Section/section';
+import closebuttonImage from './assets/Vector.png';
+import {useState} from "react";
+import './App.css';
 function App() {
 
-  const ocultar () =>{
+  const[ocultar, setOcultar] = useState(false);
 
-  }
- 
+
+  
+
 const products = [
   {
     id: 0,
@@ -37,13 +37,19 @@ const products = [
 
   return (
     <>
-    <div className="top-bar">
-        <p>Sign up and get 20% off to your first order. 
-          <a href="#">Sign Up Now.</a> 
-          <a href="#" className="botoncerrar"><img src={closebuttonImage} alt="" /></a>
-        </p>
-    </div>
-    <Header/>
+    
+    {!ocultar && (
+      <div className="top-bar">
+        <p className='textotopbar'>Sign up and get 20% off to your first order. 
+        <a href="#">Sign Up Now.</a> 
+        <a><img src={closebuttonImage} className='btncerrar' onClick={() => setOcultar(!ocultar)} alt="" />
+      {ocultar}
+    </a>
+      </p>
+      </div>
+      )}
+      <Header/>
+    
       <main>
         <section className='new-arrivals'>
           <h2>New Arrivals</h2>
