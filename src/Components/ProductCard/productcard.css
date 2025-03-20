@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+
+
+
+
+.product-card{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: end;
+}
+
+.product-image img{
+    max-width: 120px;
+    height: 100px;
+    
+}
+
+.product-information{
+    font-family: 'Satoshi';
+    font-size: 20px;
+    text-overflow: ellipsis;
+}
+

@@ -1,24 +1,21 @@
 import React from "react";
-import productImage from '../../assets/Frame 32.png'
+import { ProductProps } from "../../types/products";
 
-interface ProductCardProps{
-    name: string;
-    price: number;
-}
-
-export default function ProductCard({ name, price}: ProductCardProps) {
+export default function ProductCard({ title,price, image}: ProductProps) {
 
     return (
       <>
-    <div className='product-card'>
-              <div className='product-image'>
-                <img src={productImage} alt="Imagen del producto" />
-              </div>
-              <div className='product-information'>
-                <h3>{name}</h3>
-                <p>{price}</p>
-              </div>
-            </div>
+    <div className="flex flex-wrap items-center flex-col">
+      <div className="product-image">
+        <img src={image} alt={title} className="max-w-[120px]" />
+      </div>
+      <div className="product-information">
+        <h3 className="text-lg whitespace-nowrap overflow-hidden overflow-ellipsis w-[250px]">
+          {title}
+        </h3>
+        <p className="font-bold text-[22px]">${price}</p>
+      </div>
+    </div>
       </>
     );
     

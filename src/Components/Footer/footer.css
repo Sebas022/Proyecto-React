@@ -59,12 +59,10 @@
 
 #footer #browsers img{
     width: 20px;
-    height: 20px;
-    
+    height: 20px;  
 }
 
 .footer_text{
     letter-spacing: 1px;
     color: gray;
-    
 }

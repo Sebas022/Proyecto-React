@@ -4,36 +4,27 @@ import Footer from './Components/Footer/footer';
 import Section from './Components/Section/section';
 import closebuttonImage from './assets/Vector.png';
 import {useState} from "react";
+import { useFetch } from './Hooks/useFetch';
 import './App.css';
+import { ProductProps } from './types/products';
 function App() {
 
-  const[ocultar, setOcultar] = useState(false);
+  const[ocultar, setOcultar] = useState<boolean>(false);
+ 
+  const{
+    data: products, 
+    error, 
+    isLoading 
+  } = useFetch<ProductProps[]>("https://fakestoreapi.com/products");
 
 
-  
+  if (isLoading) {
+    return <p>Cargando productos...</p>;
+  }
 
-const products = [
-  {
-    id: 0,
-    name: "Producto 01",
-    price: 240,
-  },
-  {
-    id: 1,
-    name: "Producto 02",
-    price: 200,
-  },
-  {
-    id: 2,
-    name: "Producto 03",
-    price: 140,
-  },
-  {
-    id: 3,
-    name: "Producto 04",
-    price: 190,
-  },
-];
+  if (error) {
+    return <p>Ocurrio un error</p>;
+  }
 
   return (
     <>
@@ -51,10 +42,10 @@ const products = [
       <Header/>
     
       <main>
-        <section className='new-arrivals'>
+        <section className="max-w-[1110px] mx-auto">
           <h2>New Arrivals</h2>
-          <div className='list'>
-            {products.map((product)=>(
+          <div className="list grid grid-cols-1 gap-4 items-end md:grid-cols-2 lg:grid-cols-4">
+            {products?.map((product)=>(
               <ProductCard 
               key={product.id} {...product}
               />
@@ -63,10 +54,10 @@ const products = [
           <a href="#">View All</a>
           <hr className="separator1" />
         </section>
-        <section className='top-selling'>
+        <section className="max-w-[1110px] mx-auto">
           <h2>Top Selling</h2>
-          <div className='list'>
-            {products.map((product)=>(
+          <div className="list grid grid-cols-1 gap-4 items-end md:grid-cols-2 lg:grid-cols-4">
+            {products?.map((product)=>(
               <ProductCard 
               key={product.id} {...product}
               />
