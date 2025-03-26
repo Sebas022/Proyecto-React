@@ -28,22 +28,24 @@ function App() {
 
   return (
     <>
+
+    
     
     {!ocultar && (
       <div className="top-bar">
-        <p className='textotopbar'>Sign up and get 20% off to your first order. 
-        <a href="#">Sign Up Now.</a> 
+        <p className='textotopbar'>Sign up and get 20% off to your first order.  
+        <a href="#" className='underline underline-offset-4'>Sign Up Now.</a> 
         <a><img src={closebuttonImage} className='btncerrar' onClick={() => setOcultar(!ocultar)} alt="" />
       {ocultar}
-    </a>
-      </p>
-      </div>
+        </a>
+        </p>
+        </div>
       )}
       <Header/>
     
       <main>
         <section className="max-w-[1110px] mx-auto">
-          <h2>New Arrivals</h2>
+          <h2 id="tituloh2" className="font-bold text-[48px] text-center mt-5 mb-10">New Arrivals</h2>
           <div className="list grid grid-cols-1 gap-4 items-end md:grid-cols-2 lg:grid-cols-4">
             {products?.map((product)=>(
               <ProductCard 
@@ -51,11 +53,15 @@ function App() {
               />
             ))}
           </div>
-          <a href="#">View All</a>
-          <hr className="separator1" />
+          <div className='flex justify-center'>
+          <a href="#" className="text-[12px] rounded-full border border-gray-300 bg-white text-black px-10 py-2 mt-5 mb-5">View All</a>
+          </div>
+          <div className="flex justify-center">
+          <hr className="w-500 text-gray-200" />
+          </div>
         </section>
         <section className="max-w-[1110px] mx-auto">
-          <h2>Top Selling</h2>
+          <h2 id='tituloh2' className="font-font-bold text-[48px] text-center mt-5 mb-10">Top Selling</h2>
           <div className="list grid grid-cols-1 gap-4 items-end md:grid-cols-2 lg:grid-cols-4">
             {products?.map((product)=>(
               <ProductCard 

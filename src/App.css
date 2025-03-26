@@ -6,10 +6,17 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: 'Integral CF';
+    src: url('fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Bold.woff') format("woff"),
+         url('fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Bold.woff2') format("woff2");
+    font-weight: normal;
+}
+
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Satoshi';
+    font-family: "Satoshi";
 }
 
 .top-bar{
@@ -18,14 +25,28 @@ body{
     margin: auto;
     padding: 5px;
     color: white;
-    text-align: center;
     font-family: 'Satoshi';
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: auto;
 }
 .top-bar a{
     color: white;
+    margin-left: 5px;
 }
 
 .btncerrar{
     cursor: pointer;
-    margin-left: 20%;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    height: auto;
+    transform: translateY(-50%);
+    padding-right: 10px;
 }
+
+#tituloh2{
+    font-family: 'Integral CF';
+}
+

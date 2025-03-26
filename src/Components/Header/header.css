@@ -1,11 +1,25 @@
+@import "tailwindcss";
 
 @font-face {
     font-family: "Satoshi";
     src: url(../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf);
     font-weight: normal;
-    font-style: normal;
 }
 
+@font-face {
+    font-family: "Satoshi1";
+    src: url(../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Integral CF';
+    src: url('fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Bold.woff') format("woff"),
+         url('fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Bold.woff2') format("woff2"),
+         url('../../fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Regular.woff') format("woff")
+         url('../../fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Regular.woff2') format("woff2");
+    font-weight: normal;
+}
 
 /*-----NAV------*/
 .navbar{
@@ -18,12 +32,14 @@
     padding: 15px 30px;
     background-color: white;
     border-bottom: 1px solid #ddd;
+    
 }
 
 .logo {
-    font-size: 20px;
-    font-weight: bold;
-    padding-left: 50px;
+    font-size: 32px;
+    padding-left: 100px;
+    font-family: 'Integral CF';
+    font-weight: 700;
 }
 
 @supports (-webkit-text-stroke: 3px black) {
@@ -51,7 +67,7 @@
 }
 
 .search-bar input {   
-     position: relative;
+    position: relative;
     padding: 8px 12px;
     border-radius: 20px;
     border: 1px solid #ddd;
@@ -76,8 +92,19 @@
     gap: 15px;
     font-size: 18px;
     cursor: pointer;
-    padding-right: 50px;
+    padding-right: 100px;
 }
 
+#sectionbg{
+    background-image: url("../../assets/Rectangle 2.png");
+    background-repeat: no-repeat;
+    height: 660px;
+}
 
-  
+#titulosection{
+    font-family: "Integral CF";
+}
+
+.tituloh3{
+    font-family: "Satoshi1";
+}
