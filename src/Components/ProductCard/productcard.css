@@ -1,25 +1,20 @@
 @import "tailwindcss";
 
 
-
-
-
-.product-card{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: end;
+@font-face {
+    font-family: "Satoshi";
+    src: url(../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf);
+    font-weight: normal;
 }
 
-.product-image img{
-    max-width: 120px;
-    height: 100px;
-    
+@font-face {
+    font-family: "Satoshi1";
+    src: url(../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf);
+    font-weight: 700;
 }
 
 .product-information{
-    font-family: 'Satoshi';
+    font-family: 'Satoshi1';
     font-size: 20px;
-    text-overflow: ellipsis;
 }
 

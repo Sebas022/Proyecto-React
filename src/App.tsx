@@ -9,6 +9,15 @@ import './App.css';
 import { ProductProps } from './types/products';
 function App() {
 
+  
+  const [showAll, setShowAll] = useState<boolean>(false);
+
+  const toggleVisibility = (e) => {
+    e.preventDefault();
+    setShowAll(true); // Al hacer clic, siempre mostrará todo y el botón desaparecerá
+  };
+
+
   const[ocultar, setOcultar] = useState<boolean>(false);
  
   const{
@@ -44,33 +53,51 @@ function App() {
       <Header/>
     
       <main>
-        <section className="max-w-[1110px] mx-auto">
-          <h2 id="tituloh2" className="font-bold text-[48px] text-center mt-5 mb-10">New Arrivals</h2>
-          <div className="list grid grid-cols-1 gap-4 items-end md:grid-cols-2 lg:grid-cols-4">
-            {products?.map((product)=>(
-              <ProductCard 
-              key={product.id} {...product}
-              />
-            ))}
-          </div>
-          <div className='flex justify-center'>
-          <a href="#" className="text-[12px] rounded-full border border-gray-300 bg-white text-black px-10 py-2 mt-5 mb-5">View All</a>
-          </div>
-          <div className="flex justify-center">
-          <hr className="w-500 text-gray-200" />
-          </div>
-        </section>
-        <section className="max-w-[1110px] mx-auto">
-          <h2 id='tituloh2' className="font-font-bold text-[48px] text-center mt-5 mb-10">Top Selling</h2>
-          <div className="list grid grid-cols-1 gap-4 items-end md:grid-cols-2 lg:grid-cols-4">
-            {products?.map((product)=>(
-              <ProductCard 
-              key={product.id} {...product}
-              />
-            ))}
-          </div>
-          <a href="#">View All</a>
-        </section>
+      <section className="max-w-[1110px] mx-auto">
+      <h2 id="tituloh2" className="font-bold text-[48px] text-center mt-5 mb-10">New Arrivals</h2>
+      <div
+        className={`grid grid-cols-1 gap-4 items-end md:grid-cols-2 lg:grid-cols-4 transition-all duration-500`}
+      >
+        {products?.slice(0, showAll ? products.length : 4).map((product) => (
+          <ProductCard key={product.id} {...product} />
+        ))}
+      </div>
+      <div className="flex justify-center">
+        {!showAll && (
+          <a
+            href="#"
+            onClick={toggleVisibility}
+            className="text-[12px] rounded-full border border-gray-300 bg-white text-black px-10 py-2 mt-5 mb-10"
+          >
+            View All
+          </a>
+        )}
+      </div>
+      <div className="flex justify-center">
+        <hr className="w-500 text-gray-200" />
+      </div>
+    </section>
+    <section className="max-w-[1110px] mx-auto">
+      <h2 id="tituloh2" className="font-bold text-[48px] text-center mt-5 mb-10">Top Selling</h2>
+      <div
+        className={`grid grid-cols-1 gap-4 items-end md:grid-cols-2 lg:grid-cols-4 transition-all duration-500`}
+      >
+        {products?.slice(0, showAll ? products.length : 4).map((product) => (
+          <ProductCard key={product.id} {...product} />
+        ))}
+      </div>
+      <div className="flex justify-center">
+        {!showAll && (
+          <a
+            href="#"
+            onClick={toggleVisibility}
+            className="text-[12px] rounded-full border border-gray-300 bg-white text-black px-10 py-2 mt-5 mb-10"
+          >
+            View All
+          </a>
+        )}
+      </div>
+    </section>
         <Section/>
       </main>
       <Footer />

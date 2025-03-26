@@ -1,7 +1,30 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Satoshi";
+    src: url(../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Satoshi1";
+    src: url(../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Integral CF';
+    src: url('fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Bold.woff') format("woff"),
+         url('fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Bold.woff2') format("woff2");
+    font-weight: normal;
+}
+
 h1{
     text-align: center;
-    
     padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 48px;
+    font-family: "Integral CF";
 }
 
 .main-section{
@@ -38,7 +61,7 @@ h1{
 
 #layout .casual{
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 3;
     background-image: url('../../assets/image 11.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,8 +69,8 @@ h1{
 }
 
 #layout .formal{
-    grid-column-start: 2;
-    grid-column-end: 6;
+    grid-column-start: 3;
+    grid-column-end: 7;
     background-image: url('../../assets/image 13.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -56,7 +79,7 @@ h1{
 
 #layout .party{
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 5;
     background-image: url('../../assets/image 12.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -64,10 +87,15 @@ h1{
 }
 
 #layout .gym{
-    grid-column-start: 4;
-    grid-column-end: 6;
+    grid-column-start: 5;
+    grid-column-end: 7;
     background-image: url('../../assets/image 14.png');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
+
+h4{
+font-family: "Satoshi1";
+}
+
