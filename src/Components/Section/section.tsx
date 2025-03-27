@@ -5,7 +5,7 @@ export default function Section(){
     return(
         <>
 
-        <main className='main-section'>
+        <main className='main-section max-w-[75%] py-10 mb-50'>
         <h1 className=''>BROWSE BY DRESS STYLE</h1>
         <section id="layout" className="grid grid-cols-2 gap-4">
         <div className="caja casual relative">
@@ -22,7 +22,6 @@ export default function Section(){
         </div>
     </section>
         </main>
-
         </>
     );
 }

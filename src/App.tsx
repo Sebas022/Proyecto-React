@@ -9,13 +9,8 @@ import './App.css';
 import { ProductProps } from './types/products';
 function App() {
 
-  
-  const [showAll, setShowAll] = useState<boolean>(false);
-
-  const toggleVisibility = (e) => {
-    e.preventDefault();
-    setShowAll(true); // Al hacer clic, siempre mostrará todo y el botón desaparecerá
-  };
+  const [showAllNewArrivals, setShowAllNewArrivals] = useState<boolean>(false);
+  const [showAllTopSelling, setShowAllTopSelling] = useState<boolean>(false);
 
 
   const[ocultar, setOcultar] = useState<boolean>(false);
@@ -54,55 +49,62 @@ function App() {
     
       <main>
       <section className="max-w-[1110px] mx-auto">
-      <h2 id="tituloh2" className="font-bold text-[48px] text-center mt-5 mb-10">New Arrivals</h2>
+      <h2 id="tituloh2" className="font-bold text-[48px] text-center my-20">New Arrivals</h2>
       <div
         className={`grid grid-cols-1 gap-4 items-end md:grid-cols-2 lg:grid-cols-4 transition-all duration-500`}
       >
-        {products?.slice(0, showAll ? products.length : 4).map((product) => (
+        {products?.slice(0, showAllNewArrivals ? products.length : 4).map((product) => (
           <ProductCard key={product.id} {...product} />
         ))}
       </div>
       <div className="flex justify-center">
-        {!showAll && (
-          <a
-            href="#"
-            onClick={toggleVisibility}
-            className="text-[12px] rounded-full border border-gray-300 bg-white text-black px-10 py-2 mt-5 mb-10"
-          >
-            View All
-          </a>
-        )}
-      </div>
+          {!showAllNewArrivals && (
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setShowAllNewArrivals(true);
+              }}
+              className="text-[12px] rounded-full border border-gray-300 bg-white text-black px-10 py-2 mt-5 mb-5"
+            >
+              View All
+            </a>
+          )}
+        </div>
       <div className="flex justify-center">
-        <hr className="w-500 text-gray-200" />
+        <hr className="w-500 text-gray-200 mt-10" />
       </div>
     </section>
     <section className="max-w-[1110px] mx-auto">
-      <h2 id="tituloh2" className="font-bold text-[48px] text-center mt-5 mb-10">Top Selling</h2>
+      <h2 id="tituloh2" className="font-bold text-[48px] text-center my-20">Top Selling</h2>
       <div
         className={`grid grid-cols-1 gap-4 items-end md:grid-cols-2 lg:grid-cols-4 transition-all duration-500`}
       >
-        {products?.slice(0, showAll ? products.length : 4).map((product) => (
+        {products?.slice(0, showAllTopSelling ? products.length : 4).map((product) => (
           <ProductCard key={product.id} {...product} />
         ))}
       </div>
       <div className="flex justify-center">
-        {!showAll && (
-          <a
-            href="#"
-            onClick={toggleVisibility}
-            className="text-[12px] rounded-full border border-gray-300 bg-white text-black px-10 py-2 mt-5 mb-10"
-          >
-            View All
-          </a>
-        )}
-      </div>
+          {!showAllTopSelling && (
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setShowAllTopSelling(true);
+              }}
+              className="text-[12px] rounded-full border border-gray-300 bg-white text-black px-10 py-2 mt-5 mb-10"
+            >
+              View All
+            </a>
+          )}
+        </div>
     </section>
         <Section/>
       </main>
       <Footer />
     </>
   );
-}
+};
+
 
 export default App
