@@ -1,34 +1,16 @@
 import React from 'react';
-import userImage from '../../assets/Frame.png';
-import cartImage from '../../assets/Frame1.png';
 import versaceImage from '../../assets/Versace.png';
 import zaraImage from '../../assets/Zara.png';
 import gucciImage from '../../assets/Gucci.png';
 import pradaImage from '../../assets/Prada.png';
 import calvinkleinImage from '../../assets/CalvinKlein.png';
-import './header.css'
+import '../Header/header.css';
 
 export default function Header(){
     return (
         <>
         <header className="headershop">
-        <nav className="navbar">
-        <div className="logo"><a href="">SHOP.CO</a></div>
-        <ul className="nav-links">
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">On Sale</a></li>
-            <li><a href="#">New Arrivals</a></li>
-            <li><a href="#">Brands</a></li>
-        </ul> 
-         <div className="search-bar">
-            <input type="search" className='input'  placeholder="Search for products..."/>
-            
-        </div>
-        <div className="icons">
-            <span className="cart"><img src={cartImage} alt="" /></span>
-            <span className="user"><img src={userImage} alt="" /></span>
-        </div>
-    </nav>
+      
 
     <section id='sectionbg' className="flex items-center bg-gray-100">
   <div className="container mx-5 flex items-center">  

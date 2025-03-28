@@ -1,14 +1,14 @@
-@import "tailwindcss";
-
+@import 'tailwindcss';
 
 @font-face {
-    font-family: 'Satoshi';
-    src: url('../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf');
+    font-family: "Satoshi";
+    src: url(../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf);
     font-weight: normal;
 }
+
 @font-face {
-    font-family: 'Satoshi1';
-    src: url('../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf');
+    font-family: "Satoshi1";
+    src: url(../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf);
     font-weight: 700;
 }
 
@@ -19,22 +19,14 @@
     font-weight: normal;
 }
 
-.h2titulonew{
+.titulocarrito{
     font-family: "Integral CF";
 }
 
-.btnnew{
+.detail{
     font-family: "Satoshi";
 }
 
-.shopcofooter{
-    font-family: "Integral CF";
-}
-
-.h5titulofooter{
+.preciodetail{
     font-family: "Satoshi1";
-}
-
-.footer{
-    font-family: "Satoshi";
 }

@@ -6,7 +6,7 @@ export default function Section(){
         <>
 
         <main className='main-section max-w-[75%] py-10 mb-50'>
-        <h1 className=''>BROWSE BY DRESS STYLE</h1>
+        <h1 className="titulosection">BROWSE BY DRESS STYLE</h1>
         <section id="layout" className="grid grid-cols-2 gap-4">
         <div className="caja casual relative">
             <h4 className="absolute top-3 left-3 text-black font-bold text-lg">Casual</h4>

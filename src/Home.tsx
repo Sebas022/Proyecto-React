@@ -2,19 +2,18 @@ import Header from './Components/Header/header';
 import ProductCard from './Components/ProductCard/productCard';
 import Footer from './Components/Footer/footer';
 import Section from './Components/Section/section';
-import closebuttonImage from './assets/Vector.png';
 import {useState} from "react";
 import { useFetch } from './Hooks/useFetch';
-import './App.css';
+import './Home.css';
 import { ProductProps } from './types/products';
+import NavBar from './Components/NavBar/navbar';
 function App() {
 
   const [showAllNewArrivals, setShowAllNewArrivals] = useState<boolean>(false);
   const [showAllTopSelling, setShowAllTopSelling] = useState<boolean>(false);
 
 
-  const[ocultar, setOcultar] = useState<boolean>(false);
- 
+  
   const{
     data: products, 
     error, 
@@ -33,18 +32,7 @@ function App() {
   return (
     <>
 
-    
-    
-    {!ocultar && (
-      <div className="top-bar">
-        <p className='textotopbar'>Sign up and get 20% off to your first order.  
-        <a href="#" className='underline underline-offset-4'>Sign Up Now.</a> 
-        <a><img src={closebuttonImage} className='btncerrar' onClick={() => setOcultar(!ocultar)} alt="" />
-      {ocultar}
-        </a>
-        </p>
-        </div>
-      )}
+      <NavBar/>
       <Header/>
     
       <main>
@@ -99,6 +87,7 @@ function App() {
           )}
         </div>
     </section>
+
         <Section/>
       </main>
       <Footer />

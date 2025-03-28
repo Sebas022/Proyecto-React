@@ -13,12 +13,12 @@ export default function Footer(){
 
     return(
         <>
-        <footer className="bg-gray-200 py-6 mt-30 pb-20">
-      <div className="max-w-[1110px] mx-auto h-100">
+        <footer className="bg-gray-200 py-6 mt-30 h-120">
+      <div className="max-w-[1110px] mx-auto  ">
         {/* Newsletter Section */}
-        <div className="relative bottom-25 bg-black text-white p-6 rounded-3xl flex flex-col md:flex-row justify-between items-center">
+        <div className="relative -mt-25 mb-15 bg-black text-white p-6 rounded-3xl flex flex-col md:flex-row justify-between items-center">
             <div className="w-500 px-20">
-                 <h2 className="h2titulo text-xl font-bold text-center md:text-left text-[40px]">
+                 <h2 className="h2titulonew text-xl font-bold text-center md:text-left text-[40px]">
                      STAY UP TO DATE ABOUT OUR LATEST OFFERS
                 </h2>
             </div>
@@ -36,14 +36,14 @@ export default function Footer(){
          </div>
 
         {/* Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-30">
-          <div>
-            <h5 className="font-bold">SHOP.CO</h5>
+        <div className="grid grid-cols-6 md:grid-cols-5 gap-10">
+          <div className=''>
+            <h5 className="shopcofooter relative -top-2.5 text-[32px]">SHOP.CO</h5>
             <p className="text-sm text-gray-600 mt-2">
               We have clothes that suits your style and which you're proud to
               wear. From women to men.
             </p>
-            <div className="flex gap-2 mt-2">
+            <div className="flex gap-2 mt-10">
               <a href=""><img src={xImage} alt="X" /></a>
               <a href=""><img src={facebookImage} alt="Facebook" /></a>
               <a href=""><img src={instagramImage} alt="Instagram" /></a>
@@ -51,9 +51,9 @@ export default function Footer(){
             </div>
           </div>
 
-          <div>
-            <h5 className="font-bold">COMPANY</h5>
-            <ul className="text-sm text-gray-600 mt-2">
+          <div className='text-start ml-10'>
+            <h5 className="h5titulofooter">COMPANY</h5>
+            <ul className="text-sm text-gray-600 flex flex-col mt-5 gap-y-5">
               <li><a href="#">About</a></li>
               <li><a href="#">Features</a></li>
               <li><a href="#">Works</a></li>
@@ -61,9 +61,9 @@ export default function Footer(){
             </ul>
           </div>
 
-          <div>
-            <h5 className="font-bold">HELP</h5>
-            <ul className="text-sm text-gray-600 mt-2">
+          <div className=''>
+            <h5 className="h5titulofooter">HELP</h5>
+            <ul className="text-sm text-gray-600 mt-5 flex flex-col gap-y-5">
               <li><a href="#">Customer Support</a></li>
               <li><a href="#">Delivery Details</a></li>
               <li><a href="#">Terms & Conditions</a></li>
@@ -72,8 +72,8 @@ export default function Footer(){
           </div>
 
           <div>
-            <h5 className="font-bold">FAQ</h5>
-            <ul className="text-sm text-gray-600 mt-2">
+            <h5 className="h5titulofooter">FAQ</h5>
+            <ul className="text-sm text-gray-600 mt-5 flex flex-col gap-y-5">
               <li><a href="#">Account</a></li>
               <li><a href="#">Manage Deliveries</a></li>
               <li><a href="#">Orders</a></li>
@@ -82,8 +82,8 @@ export default function Footer(){
           </div>
 
           <div>
-            <h5 className="font-bold">RESOURCES</h5>
-            <ul className="text-sm text-gray-600 mt-2">
+            <h5 className="h5titulofooter">RESOURCES</h5>
+            <ul className="text-sm text-gray-600 mt-5 flex flex-col gap-y-5">
               <li><a href="#">Free eBooks</a></li>
               <li><a href="#">Development Tutorial</a></li>
               <li><a href="#">How to - Blog</a></li>
@@ -92,13 +92,12 @@ export default function Footer(){
           </div>
         </div>
 
-    <div className="clearfix"></div>
-
-    <hr className="separator2 my-4" />
-
+        <div className="flex justify-center">
+        <hr className="w-500 text-gray-300 mt-10 mb-5" />
+      </div>
     {/* Contenedor del copyright y métodos de pago */}
     <div className="flex justify-between items-center">
-      <p>Shop.co &copy; 2000 - 2023. All Rights Reserved</p>
+      <p className='text-gray-500'>Shop.co &copy; 2000 - 2023. All Rights Reserved</p>
       <div className="payments flex gap-4">
         <a href="" className="w-16 h-10"><img src={visaImage} alt="Visa" /></a>
         <a href="" className="w-16 h-10"><img src={mastercardImage} alt="MasterCard" /></a>
