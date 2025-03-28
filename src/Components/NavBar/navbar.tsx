@@ -50,7 +50,7 @@ export default function Header(){
       <span className="cart">
         <img src={cartImage} alt="Cart" />
       </span>
-      <span className="absolute -top-2 -right-2 bg-red-400 text-white text-xs px-2 rounded-full">
+      <span className="absolute -top-2 -right-3 bg-red-400 text-white text-xs px-2 rounded-full">
         0
       </span>
     </Link>

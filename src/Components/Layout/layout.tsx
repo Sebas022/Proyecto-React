@@ -1,3 +1,4 @@
+import Footer from '../Footer/footer';
 import NavBar from '../NavBar/navbar'
 
 interface LayoutProps{
@@ -9,6 +10,7 @@ export function Layout({children} : LayoutProps){
         <>
         <NavBar/>
         <main className="max-w-[1110px] mx-auto">{children}</main>
+        <Footer/>
         </>
     )
 }
