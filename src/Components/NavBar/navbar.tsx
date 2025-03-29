@@ -3,10 +3,13 @@ import userImage from '../../assets/Frame.png';
 import cartImage from '../../assets/Frame1.png';
 import { Link } from 'react-router';
 import closebuttonImage from '../../assets/Vector.png';
-import './navbar.css'
+import './navbar.css';
+import { useContext } from 'react';
+import { ShoppingCartContext } from '../../Context/context';
 
 
 export default function Header(){
+  const context = useContext(ShoppingCartContext);
 
     const[ocultar, setOcultar] = useState<boolean>(false);
  
@@ -51,7 +54,7 @@ export default function Header(){
         <img src={cartImage} alt="Cart" />
       </span>
       <span className="absolute -top-2 -right-3 bg-red-400 text-white text-xs px-2 rounded-full">
-        0
+        {context.cartProducts.length}
       </span>
     </Link>
 

@@ -2,20 +2,20 @@
 
 @font-face {
     font-family: "Satoshi";
-    src: url(../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf);
+    src: url('../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf') format(".ttf");
     font-weight: normal;
 }
 
 @font-face {
     font-family: "Satoshi1";
-    src: url(../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf);
+    src: url('../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf') format(".ttf");
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'Integral CF';
-    src: url('fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Bold.woff') format("woff"),
-         url('fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Bold.woff2') format("woff2"),
+    src: url('../../fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Bold.woff') format("woff"),
+         url('../../fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Bold.woff2') format("woff2"),
          url('../../fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Regular.woff') format("woff")
          url('../../fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Regular.woff2') format("woff2");
     font-weight: normal;

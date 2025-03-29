@@ -3,13 +3,13 @@
 
 @font-face {
     font-family: "Satoshi";
-    src: url(../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf);
+    src: url('../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf') format(".ttf");
     font-weight: normal;
 }
 
 @font-face {
     font-family: "Satoshi1";
-    src: url(../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf);
+    src: url('../../fonts/Satoshi_Complete/Fonts/Variable/Satoshi-Variable.ttf') format(".ttf");
     font-weight: 700;
 }
 

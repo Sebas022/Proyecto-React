@@ -4,7 +4,8 @@ import { ProductProps } from "../../types/products";
 import { Layout } from "../../Components/Layout/layout";
 import './productdetail.css'
 import { Link } from "react-router";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { ShoppingCartContext } from "../../Context/context"
 
 
 export default function ProductDetailPage(){
@@ -13,6 +14,8 @@ export default function ProductDetailPage(){
   const sizes = ["Small", "Medium", "Large", "X-Large"];
 
     const {id} = useParams();
+    const context = useContext(ShoppingCartContext);
+    console.log(context);
 
     const {data: product, error, isLoading } = useFetch<ProductProps>(
         `https://fakestoreapi.com/products/${id}`
@@ -60,8 +63,8 @@ export default function ProductDetailPage(){
           <hr className="w-600 text-gray-300 my-5"/>
         </div>
         <div className="flex justify-between mt-6">
-        <button className="contador rounded-full border border-black px-20 bg-gray-200">1</button>
-        <Link to={`/Cart`}><button style={{cursor: "pointer"}} onClick={() => console.log("agregado")} className="text-[16px] rounded-full border-black text-white bg-black px-30 py-2">Add to cart</button></Link>
+        <Link to={``}><button style={{cursor: "pointer"}} onClick={() => product && context.setCartProducts([...context.cartProducts,product])} className="text-[16px] rounded-full border-black text-white bg-black px-25 py-2">Add to cart</button></Link>
+        <span>Cantidad de elementos agregados: {context.cartProducts.length}</span>    
         </div>
      </div>
      

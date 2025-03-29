@@ -1,19 +1,18 @@
-import Header from './Components/Header/header';
-import ProductCard from './Components/ProductCard/productCard';
-import Footer from './Components/Footer/footer';
-import Section from './Components/Section/section';
+import Header from '../../Components/Header/header';
+import ProductCard from '../../Components/ProductCard/productCard';
+import Footer from '../../Components/Footer/footer';
+import Section from '../../Components/Section/section';
 import {useState} from "react";
-import { useFetch } from './Hooks/useFetch';
+import { useFetch } from '../../Hooks/useFetch';
+import { ProductProps } from '../../types/products';
+import NavBar from '../../Components/NavBar/navbar';
 import './Home.css';
-import { ProductProps } from './types/products';
-import NavBar from './Components/NavBar/navbar';
+
 function App() {
 
   const [showAllNewArrivals, setShowAllNewArrivals] = useState<boolean>(false);
   const [showAllTopSelling, setShowAllTopSelling] = useState<boolean>(false);
 
-
-  
   const{
     data: products, 
     error, 
@@ -22,7 +21,7 @@ function App() {
 
 
   if (isLoading) {
-    return <p>Cargando productos...</p>;
+    return <p className="titulocarrito text-center text-[50px] my-50">Cargando productos...</p>;
   }
 
   if (error) {

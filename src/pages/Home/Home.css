@@ -8,8 +8,8 @@
 
 @font-face {
     font-family: 'Integral CF';
-    src: url('fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Bold.woff') format("woff"),
-         url('fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Bold.woff2') format("woff2");
+    src: url('../../fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Bold.woff') format("woff"),
+         url('../../fonts/Integral-CF-Font/Integral-www.Dfonts.org/Webfont/IntegralCF-Bold.woff2') format("woff2");
     font-weight: normal;
 }
 
@@ -19,9 +19,7 @@ body{
     font-family: "Satoshi";
 }
 
-
-
 #tituloh2{
-    font-family: 'Integral CF';
+    font-family: "Integral CF";
 }
 
