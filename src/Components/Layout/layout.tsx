@@ -9,7 +9,7 @@ export function Layout({children} : LayoutProps){
     return (
         <>
         <NavBar/>
-        <main className="max-w-[1110px] mx-auto">{children}</main>
+        <main className="max-w-[1250px] mx-auto">{children}</main>
         <Footer/>
         </>
     )

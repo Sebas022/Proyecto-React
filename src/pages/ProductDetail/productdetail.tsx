@@ -4,14 +4,22 @@ import { ProductProps } from "../../types/products";
 import { Layout } from "../../Components/Layout/layout";
 import './productdetail.css'
 import { Link } from "react-router";
-import { useState, useContext } from "react";
+import { useContext, useState } from "react";
 import { ShoppingCartContext } from "../../Context/context"
+/*import { SizeContext } from "../../Context/contextbtn";*/
 
 
 export default function ProductDetailPage(){
 
   const [activeButton, setActiveButton] = useState<number | null>(null);
   const sizes = ["Small", "Medium", "Large", "X-Large"];
+  {/*const context1 = useContext(SizeContext);
+
+  const { sizes, activeButton, setActiveButton } = context1 as { 
+    sizes: string[], 
+    activeButton: number | null, 
+    setActiveButton: React.Dispatch<React.SetStateAction<number | null>> 
+  };*/}
 
     const {id} = useParams();
     const context = useContext(ShoppingCartContext);
@@ -23,7 +31,7 @@ export default function ProductDetailPage(){
 
     
   if (isLoading) {
-    return <p>Cargando productos...</p>;
+    return <p  className="titulocarrito text-center text-[50px] my-50">Cargando producto...</p>;
   }
 
   if (error) {
@@ -59,12 +67,29 @@ export default function ProductDetailPage(){
         </button>
       ))}
     </div>
+        {/*<div>
+      <div className="flex justify-start gap-10">
+        {sizes.map((size: string, index: number) => (
+          <button
+            key={index}
+            onClick={() => setActiveButton(index)}
+            className={`rounded-full border border-white px-5 py-2 text-gray-500 bg-gray-100 transition-all cursor-pointer 
+              ${activeButton === index ? "!bg-black text-white" : ""}`}
+          >
+            {size}
+          </button>
+        ))}
+      </div>
+
+      {activeButton !== null && (
+        <p className="mt-4">Talla seleccionada: {sizes[activeButton]}</p>
+      )}
+    </div>*/}
         <div className="flex justify-center">
           <hr className="w-600 text-gray-300 my-5"/>
         </div>
         <div className="flex justify-between mt-6">
-        <Link to={``}><button style={{cursor: "pointer"}} onClick={() => product && context.setCartProducts([...context.cartProducts,product])} className="text-[16px] rounded-full border-black text-white bg-black px-25 py-2">Add to cart</button></Link>
-        <span>Cantidad de elementos agregados: {context.cartProducts.length}</span>    
+        <Link to={``}><button style={{cursor: "pointer"}} onClick={() => product && context.setCartProducts([...context.cartProducts,product])} className="text-[16px] rounded-full border-black text-white bg-black px-25 py-2">Add to cart</button></Link>  
         </div>
      </div>
      

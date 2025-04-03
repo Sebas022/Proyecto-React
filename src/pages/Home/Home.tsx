@@ -21,7 +21,7 @@ function App() {
 
 
   if (isLoading) {
-    return <p className="titulocarrito text-center text-[50px] my-50">Cargando productos...</p>;
+    return ""
   }
 
   if (error) {
