@@ -2,11 +2,23 @@ import { createContext, SetStateAction, useState } from "react";
 import { ProductProps } from "../types/products";
 
 
+interface UserInfo {
+    name: string;
+    email: string;
+    address: string;
+    city: string;
+    zipCode: string;
+  }
+
 interface ShoppingCartContextProps{
     count: number;
     setCount: React.Dispatch<React.SetStateAction<number>>;
     cartProducts: ProductProps[];
     setCartProducts: React.Dispatch<SetStateAction<ProductProps[]>>
+    userInfo: UserInfo | null;
+    setUserInfo: React.Dispatch<React.SetStateAction<UserInfo | null>>;
+    checkoutComplete: boolean;
+    setCheckoutComplete: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 /*Creamos el contexto*/
@@ -28,9 +40,14 @@ export const ShoppingCartProvider = ({
 
     const [count, setCount] = useState<number>(0);
     const [cartProducts, setCartProducts] = useState<ProductProps[]>([]);
+    const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
+    const [checkoutComplete, setCheckoutComplete] = useState<boolean>(false);
 
     return (
-        <ShoppingCartContext.Provider value = {{count, setCount, cartProducts, setCartProducts }}>
+        <ShoppingCartContext.Provider value = {{count, setCount, cartProducts, setCartProducts, userInfo,
+            setUserInfo,
+            checkoutComplete,
+            setCheckoutComplete, }}>
             {children}
         </ShoppingCartContext.Provider>
     );

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import userImage from '../../assets/Frame.png';
 import cartImage from '../../assets/Frame1.png';
 import { Link } from 'react-router';
@@ -37,7 +37,6 @@ export default function Header(){
     <li><a href="#" className="{hover:text-gray-500}">Brands</a></li>
   </ul>
 
-  {/* Barra de búsqueda */}
   <div className="flex-1 max-w-md mx-5">
     <input 
       type="search" 
@@ -46,7 +45,6 @@ export default function Header(){
     />
   </div>
 
-  {/* Iconos */}
   <div className="flex items-center space-x-6 relative pr-25">
     {/* Carrito */}
     <Link to="/Cart" className="relative">

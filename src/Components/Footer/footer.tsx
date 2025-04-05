@@ -13,7 +13,7 @@ export default function Footer(){
 
     return(
         <>
-        <footer className="bg-gray-200 py-6 mt-30 h-120">
+        <footer className="bg-gray-200 py-6 mt-60 h-120">
       <div className="max-w-[1110px] mx-auto  ">
         {/* Newsletter Section */}
         <div className="relative -mt-25 mb-15 bg-black text-white p-6 rounded-3xl flex flex-col md:flex-row justify-between items-center">
