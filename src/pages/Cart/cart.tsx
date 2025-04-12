@@ -136,7 +136,9 @@ export default function Cart() {
             .reduce((acc, item) => acc + item.price, 0)
             .toFixed(2)}
         </p>
-
+            </div>
+          </div>
+        </div>
         {showCheckoutForm ? (
           <CheckoutFormRHF onSubmit={handleFormSubmit} />
         ) : ( 
@@ -149,9 +151,6 @@ export default function Cart() {
             </button>
           </div>
         )}
-            </div>
-          </div>
-        </div>
       </Layout>
     </>
   );
